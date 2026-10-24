@@ -1,0 +1,462 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --hijau: #16a085;
+    --hijau-tua: #087f70;
+    --biru: #2471a3;
+    --biru-tua: #154360;
+    --putih: #ffffff;
+    --abu: #64748b;
+    --latar: #f1f8f7;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--putih);
+    color: #243746;
+    line-height: 1.7;
+}
+
+/* NAVIGASI */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: var(--putih);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--biru-tua);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--hijau);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar nav a {
+    color: #243746;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--hijau);
+}
+
+/* BERANDA */
+.hero {
+    min-height: 570px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(135deg, #e0f7f1, #e5f1ff);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.label {
+    color: var(--hijau-tua);
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    color: var(--biru-tua);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--hijau);
+}
+
+.hero h2 {
+    font-size: 19px;
+    margin-bottom: 15px;
+    color: var(--biru);
+}
+
+.hero-text > p:not(.label) {
+    color: #526575;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 27px;
+    background: linear-gradient(90deg, var(--hijau), var(--biru));
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px #2471a355;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    width: 270px;
+    height: 320px;
+    padding: 8px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--hijau), var(--biru));
+    box-shadow: 0 15px 35px #15436030;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* BAGIAN UMUM */
+.section {
+    padding: 75px 10%;
+    scroll-margin-top: 80px;
+}
+
+.alternate {
+    background: var(--latar);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title > p {
+    color: var(--hijau-tua);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: var(--biru-tua);
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+/* PROFIL */
+.profile-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 35px;
+    padding: 35px;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 8px 30px #15436010;
+    border: 1px solid #e2eeef;
+}
+
+.profile-card h3 {
+    color: var(--biru-tua);
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.profile-card p {
+    color: var(--abu);
+    margin-bottom: 12px;
+}
+
+.biodata {
+    padding: 20px;
+    background: #e9f7f4;
+    border-radius: 12px;
+}
+
+.biodata p {
+    border-bottom: 1px solid #d0e7e1;
+    padding: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.biodata p:last-child {
+    border-bottom: none;
+}
+
+/* CITA-CITA */
+.dream-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    text-align: center;
+    border-radius: 18px;
+    border-bottom: 5px solid var(--hijau);
+    box-shadow: 0 8px 25px #15436012;
+}
+
+.dream-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.dream-card h3 {
+    color: var(--biru-tua);
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+.dream-card p {
+    color: var(--abu);
+}
+
+/* PANDANGAN HIDUP */
+.quote {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    padding: 30px;
+    border-left: 5px solid var(--hijau);
+    background: linear-gradient(120deg, #e4f8f0, #eaf3ff);
+    border-radius: 0 15px 15px 0;
+}
+
+.quote p {
+    color: var(--biru-tua);
+    font-size: 21px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.quote span {
+    display: block;
+    margin-top: 12px;
+    color: var(--hijau-tua);
+}
+
+.list-heading {
+    color: var(--biru-tua);
+    margin-bottom: 15px;
+}
+
+.values-list {
+    list-style: none;
+}
+
+.values-list li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #f1f8f7;
+    border-radius: 8px;
+}
+
+.values-list li::before {
+    content: "✓ ";
+    color: var(--hijau);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* TABEL PENDIDIKAN */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #15436012;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 550px;
+}
+
+th {
+    background: linear-gradient(90deg, var(--hijau-tua), var(--biru));
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e1eeee;
+}
+
+tbody tr:nth-child(even) {
+    background: #eff9f7;
+}
+
+tbody tr:hover {
+    background: #dcefeb;
+}
+
+/* KEAHLIAN */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    padding: 28px 20px;
+    text-align: center;
+    border: 1px solid #e0ecec;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px #15436015;
+    border-color: var(--hijau);
+}
+
+.skill-card span {
+    font-size: 38px;
+}
+
+.skill-card h3 {
+    color: var(--biru-tua);
+    margin: 10px 0;
+}
+
+.skill-card p {
+    color: var(--abu);
+    font-size: 14px;
+}
+
+/* KONTAK */
+.contact-section {
+    text-align: center;
+    background: linear-gradient(135deg, #e1f7ef, #e5efff);
+}
+
+.contact-description {
+    margin: -20px 0 28px;
+    color: var(--abu);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 11px 23px;
+    background: linear-gradient(90deg, var(--hijau), var(--biru));
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #15436030;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: var(--biru-tua);
+    color: white;
+    font-size: 13px;
+}
+
+footer a {
+    color: #8ce4c9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE HP DAN TABLET */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 17px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+        gap: 30px;
+    }
+
+    .hero-image {
+        width: 220px;
+        height: 260px;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .quote p {
+        font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
